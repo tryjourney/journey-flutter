@@ -98,9 +98,12 @@ class StaticMap {
     // build query strings, encoding lists as multiple values
     String queryString = queryParameters.entries.expand((entry) {
       if (entry.value is List) {
-        return (entry.value as List).map((value) => '${Uri.encodeComponent(entry.key)}=${Uri.encodeComponent(value)}');
+        return (entry.value as List).map((value) =>
+            '${Uri.encodeComponent(entry.key)}=${Uri.encodeComponent(value)}');
       } else {
-        return ['${Uri.encodeComponent(entry.key)}=${Uri.encodeComponent(entry.value.toString())}'];
+        return [
+          '${Uri.encodeComponent(entry.key)}=${Uri.encodeComponent(entry.value.toString())}'
+        ];
       }
     }).join('&');
 
@@ -114,7 +117,8 @@ class StaticMap {
 
     switch (path) {
       case StaticMapPathPoints(:final points):
-        final encodedPolyline = encodePolyline(points.map((e) => [e.latitude, e.longitude]).toList());
+        final encodedPolyline = encodePolyline(
+            points.map((e) => [e.latitude, e.longitude]).toList());
         pathString = 'polyline:$encodedPolyline';
 
       case StaticMapPathEncoded(:final polyline):
@@ -149,7 +153,8 @@ class StaticMap {
   }
 
   String _buildMarker(StaticMapMarker marker) {
-    String markerString = 'lat:${marker.point.latitude},lng:${marker.point.longitude}';
+    String markerString =
+        'lat:${marker.point.latitude},lng:${marker.point.longitude}';
 
     if (marker.color != null) {
       markerString += ',color:${_toColorString(marker.color!)}';

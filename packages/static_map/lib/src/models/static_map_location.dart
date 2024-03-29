@@ -12,7 +12,8 @@ sealed class StaticMapLocation with _$StaticMapLocation {
   /// A location defined by coordinates.
   @Assert('latitude >= -90 && latitude <= 90')
   @Assert('longitude >= -180 && longitude <= 180')
-  const factory StaticMapLocation.coordinates(double latitude, double longitude) = StaticMapLatLng;
+  const factory StaticMapLocation.coordinates(
+      double latitude, double longitude) = StaticMapLatLng;
 
   // In the future, we'll add support for querying a location.
   // const factory StaticMapLocation.query(String query) = StaticMapLocationQuery;

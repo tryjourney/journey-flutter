@@ -11,7 +11,9 @@ part 'static_map_marker.freezed.dart';
 /// A marker is a point on the map that can be styled with a color, size, label, and more.
 /// Learn more: https://docs.journey.tech/sdks/flutter/usage/markers
 @freezed
-sealed class StaticMapMarker with _$StaticMapMarker implements StaticMapOverlay {
+sealed class StaticMapMarker
+    with _$StaticMapMarker
+    implements StaticMapOverlay {
   const factory StaticMapMarker({
     /// The location of the marker.
     required StaticMapLocation point,
