@@ -1,3 +1,7 @@
+## 0.3.1
+
+* Fixes issue where marker labels were not being escaped.
+
 ## 0.3.0
 
 * Separates `StaticMapPath` and `StaticMapMarker` classes with different constructors.

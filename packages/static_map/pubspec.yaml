@@ -1,6 +1,6 @@
 name: static_map
 description: "Quickly generate customizable static maps with support for markers and paths."
-version: 0.3.0
+version: 0.3.1
 homepage: 'https://docs.journey.tech'
 repository: 'https://github.com/tryjourney/journey-flutter/tree/main/packages/static_map'
 documentation: 'https://docs.journey.tech/quickstart/flutter'
