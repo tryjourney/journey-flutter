@@ -160,7 +160,7 @@ class StaticMap {
     }
 
     if (marker.label != null) {
-      markerString += ',label:${marker.label}';
+      markerString += ',label:"${marker.label}"';
     }
 
     if (marker.labelSize != null) {
